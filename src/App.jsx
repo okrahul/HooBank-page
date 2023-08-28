@@ -1,5 +1,38 @@
-function App() {
-  return <div className="text-xl font-bold text-red-500 bg-black">App</div>;
-}
+import styles from "./style";
+import {
+  Navbar,
+  Hero,
+  Billing,
+  Business,
+  CTA,
+  CardDeal,
+  Footer,
+  Status,
+  Testimonials,
+  Clients,
+} from "./components";
 
-export default App;
+export const App = () => {
+  return (
+    <div className="bg-primary w-full overflow-hidden">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar />
+        </div>
+      </div>
+
+      <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Hero />
+        </div>
+      </div>
+
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Status /> <Business /> <Billing /> <CardDeal /> <Testimonials />
+          <Clients /> <CTA /> <Footer />
+        </div>
+      </div>
+    </div>
+  );
+};
